@@ -15,7 +15,7 @@ import {deleteAsync} from 'del';
 // Styles
 
 export const styles = () => {
-  return gulp.src('source/sass/style.scss', { sourcemaps: true })
+  return gulp.src('sass/style.scss', { sourcemaps: true })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
@@ -62,7 +62,7 @@ export const createWebp = () => {
 //SVG
 
 export const svg = () => {
-  return gulp.src(['img/**/*.svg', '!source/img/icons/*.svg'])
+  return gulp.src(['img/**/*.svg', '!img/icons/*.svg'])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'))
 }
@@ -85,7 +85,7 @@ export const copy = () => {
     '*.ico',
     '*.webmanifest'
   ],{
-    base: 'source'
+    base: ''
   })
   .pipe(gulp.dest('build'))
   done();
