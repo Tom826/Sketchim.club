@@ -1,0 +1,122 @@
+.main {
+  flex-grow: 1;
+  //padding: 0 22px;
+
+  &--policy {
+    padding: 0 12px;
+  }
+}
+
+.main__intro {
+  background-image: url(../img/intro-back.svg);
+  background-position: center;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-color: #FFE49E;
+}
+
+.main__intro-img {
+  margin: 0 auto;
+  display: block;
+  margin-top: 10px;
+}
+
+.main__intro-conetnt {
+  margin: 5px 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.main__hero {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.main__for-you {
+  background-color: #FFE49E;
+}
+
+.main__advantages {
+  position: relative;
+
+  &::before {
+    @include background-img;
+
+    content: "";
+    position: absolute;
+    width: 238px;
+    height: 238px;
+    background-image: url(../img/like.png);
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.main__author-img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.main__author--wrapper {
+  background-color: #FFED00;
+}
+
+.main__portfolio-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2,135px);
+  gap: 20px 30px;
+  margin: 0 8px;
+}
+
+.main__changes {
+  background-color: #FFE49E;
+  margin-top: 30px;
+}
+
+.main__price {
+  position: relative;
+  margin-bottom: 50px;
+
+  &::before {
+    @include background-img;
+
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    background-image: url(../img/sketchbook.png);
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.main__price-info {
+  font-size: 21px;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #FF5959;
+}
+
+.main__author-link {
+  font-family: inherit;
+  cursor: pointer;
+  color: #FF5959;
+  margin: 5px 0 30px;
+  font-size: 21px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main__portfolio-img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.main__content {
+  padding: 0 12px;
+}

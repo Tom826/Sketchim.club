@@ -1,0 +1,28 @@
+.footer {
+  background-color: #FFED00;
+  padding: 20px 40px;
+}
+
+.footer__link {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-family: inherit;
+  font-size: 14px;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.footer__social {
+  display: flex;
+  justify-content: space-evenly;
+}

@@ -1,0 +1,19 @@
+.header {
+  position: relative;
+  min-height: 43px;
+  display: flex;
+  justify-content: end;
+  padding: 0 16px;
+}
+
+.header__nav {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.header__button {
+  display: block;
+  background-color: transparent;
+}

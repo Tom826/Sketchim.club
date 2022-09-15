@@ -1,0 +1,16 @@
+.toggle {
+  border: none;
+  background-color: transparent;
+  padding: 15px;
+  margin: 0 15px;
+}
+
+.toggle--closed {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 24px;
+}
