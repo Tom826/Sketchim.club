@@ -38,21 +38,21 @@ export const html = () => {
 // Images
 
 export const optimizeImages = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+  return gulp.src('img/**/*.{jpg,png}')
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'))
 }
 
 
 const copyImages = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+  return gulp.src('img/**/*.{jpg,png}')
     .pipe(gulp.dest('build/img'))
 }
 
 //WebP
 
 export const createWebp = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+  return gulp.src('img/**/*.{jpg,png}')
   .pipe(squoosh({
     webp: {}
   }))
@@ -62,7 +62,7 @@ export const createWebp = () => {
 //SVG
 
 export const svg = () => {
-  return gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
+  return gulp.src(['img/**/*.svg', '!source/img/icons/*.svg'])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'))
 }
@@ -81,9 +81,9 @@ export const svg = () => {
 
 export const copy = () => {
   return gulp.src([
-    'source/fonts/*.{woff2,woff}',
-    'source/*.ico',
-    'source/*.webmanifest'
+    'fonts/*.{woff2,woff}',
+    '*.ico',
+    '*.webmanifest'
   ],{
     base: 'source'
   })
@@ -121,8 +121,8 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('source/*.html', gulp.series(html, reload));
+  gulp.watch('sass/**/*.scss', gulp.series(styles));
+  gulp.watch('*.html', gulp.series(html, reload));
 }
 
 export const build = gulp.series(
