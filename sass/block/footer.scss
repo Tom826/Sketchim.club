@@ -1,6 +1,10 @@
 .footer {
   background-color: #FFED00;
   padding: 20px 40px;
+
+  @include desktop {
+    padding: 50px 80px;
+  }
 }
 
 .footer__link {
@@ -20,9 +24,21 @@
   &:active {
     color: rgba(0, 0, 0, 0.3);
   }
+
+  @include desktop {
+    max-width: 350px;
+  }
 }
 
 .footer__social {
   display: flex;
   justify-content: space-evenly;
+}
+
+.footer__wrapper {
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
 }

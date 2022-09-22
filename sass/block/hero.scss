@@ -20,6 +20,18 @@
     &--advantages {
       padding: 48px 50px 100px;
     }
+
+    &--author {
+      padding: 58px 140px 50px;
+    }
+
+    &--portfolio {
+      padding: 50px 0 20px;
+    }
+
+    &--price {
+      padding: 60px 100px 10px;
+    }
   }
 }
 
@@ -78,7 +90,17 @@
 
   @include desktop {
     margin: 0;
-    padding: 30px 0px 0px 50px;
+    padding: 30px 0 0 50px;
+
+    &--author {
+      padding: 30px 0 0 208px;
+    }
+
+    &--price {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -122,11 +144,29 @@
 
     @include background-img;
 
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     background-image: url("../img/icon/heart.svg");
     left: -40px;
     top: -3px;
+
+    @include desktop {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 60%;
+    }
+  }
+
+  @include desktop {
+    &--heart {
+      display: block;
+      border-radius: 20px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      max-width: 300px;
+      min-height: 200px;
+      padding: 40px;
+      text-align: center;
+    }
   }
 }
 
@@ -146,4 +186,8 @@
   display: block;
   font-weight: bold;
   font-size: 18px;
+
+  @include desktop {
+    margin-top: 20px;
+  }
 }
