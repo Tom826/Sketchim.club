@@ -6,9 +6,9 @@
 *.pdf
 *.psd
 *.sublime*
-content/
 build/
 node_modules/
+content/
 npm-debug.*
 source/css/*.css
 source/css/*.map
