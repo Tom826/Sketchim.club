@@ -9,4 +9,8 @@
   margin: 0;
 
   background-color: #FFF;
+
+  @include desktop {
+    font-size: 18px;
+  }
 }

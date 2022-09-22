@@ -5,6 +5,18 @@
     padding-top: 300px;
     padding-bottom: 0;
   }
+
+  @include desktop {
+    padding: 58px 140px 100px;
+
+    &--intro {
+      padding: 60px 300px 96px;
+    }
+
+    &--for-you {
+      padding: 22px 230px 36px;
+    }
+  }
 }
 
 .hero__tittle {
@@ -16,6 +28,10 @@
 
   &--author {
     margin-bottom: 5px;
+  }
+
+  @include desktop {
+    text-align: center;
   }
 }
 
@@ -33,10 +49,19 @@
     transform: translateX(-50%);
 
     @include background-img;
+
+    @include desktop {
+      display: none;
+    }
   }
 
   &--with-photo {
     margin-bottom: 290px;
+
+    @include desktop {
+      text-align: center;
+      margin-bottom: 54px;
+    }
   }
 }
 

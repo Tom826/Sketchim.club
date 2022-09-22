@@ -13,3 +13,15 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+@mixin desktop {
+  @media screen and (min-width: 1250px){
+    @content;
+  }
+}
+
+@mixin resolution {
+  @media (min-resolution: 2dppx){
+    @content;
+  }
+}

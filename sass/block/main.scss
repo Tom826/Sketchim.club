@@ -12,24 +12,47 @@
   background-position: center;
   width: 100%;
   background-repeat: no-repeat;
-  background-color: #FFE49E;
+  background-color: #FFE9B8;
+
+  @include desktop {
+    background-image: url(../img/intro-back-desktop.png);
+    width: 100%;
+    height: 665px;
+
+    @include resolution {
+      background-image: url(../img/intro-back-desktop@2x.png);
+    }
+  }
 }
 
 .main__intro-img {
   margin: 0 auto;
   display: block;
   margin-top: 10px;
+
+  @include desktop {
+    min-height: 550px;
+    min-width: 594px;
+  }
 }
 
-.main__intro-conetnt {
+.main__intro-content {
   margin: 5px 0;
   text-align: center;
   font-weight: 700;
+
+  @include desktop {
+    margin: 30px 0;
+  }
 }
 
 .main__hero {
   margin-bottom: 40px;
   position: relative;
+
+  @include desktop {
+    margin: 0 auto;
+  }
 }
 
 .main__for-you {

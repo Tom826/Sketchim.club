@@ -1,9 +1,13 @@
 .header {
   position: relative;
-  min-height: 43px;
+  max-height: 42px;
   display: flex;
   justify-content: end;
   padding: 0 16px;
+
+  @include desktop {
+    justify-content: center;
+  }
 }
 
 .header__nav {
@@ -11,9 +15,17 @@
   width: 100%;
   top: 0;
   left: 0;
+
+  @include desktop {
+    position: relative;
+  }
 }
 
 .header__button {
   display: block;
   background-color: transparent;
+
+  @include desktop {
+    display: none;
+  }
 }
