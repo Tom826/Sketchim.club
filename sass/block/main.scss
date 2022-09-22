@@ -56,7 +56,22 @@
 }
 
 .main__for-you {
-  background-color: #FFE49E;
+  background-color: #FFE9B8;
+  position: relative;
+
+  @include desktop {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 244px;
+      height: 228px;
+      background-image: url("../img/like-desktop.png");
+      top: -70px;
+      right: 60px;
+
+      @include background-img;
+    }
+  }
 }
 
 .main__advantages {
@@ -73,6 +88,17 @@
     top: 40px;
     left: 50%;
     transform: translateX(-50%);
+
+    @include desktop {
+      display: none;
+    }
+  }
+}
+
+.columns-2 {
+  @include desktop {
+    column-count: 2;
+    column-gap: 70px;
   }
 }
 

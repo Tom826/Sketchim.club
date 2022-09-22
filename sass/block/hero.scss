@@ -10,11 +10,15 @@
     padding: 58px 140px 100px;
 
     &--intro {
-      padding: 60px 300px 96px;
+      padding: 60px 178px 96px;
     }
 
     &--for-you {
-      padding: 22px 230px 36px;
+      padding: 22px 170px 36px;
+    }
+
+    &--advantages {
+      padding: 48px 50px 100px;
     }
   }
 }
@@ -71,6 +75,11 @@
   &--ordered {
     counter-reset: changes-list;
   }
+
+  @include desktop {
+    margin: 0;
+    padding: 30px 0px 0px 50px;
+  }
 }
 
 .hero__item {
@@ -101,6 +110,10 @@
     background-image: url("../img/icon/marker.svg");
     left: -40px;
     top: -3px;
+
+    @include desktop {
+      top: 0px;
+    }
   }
 
   &--heart::before {
