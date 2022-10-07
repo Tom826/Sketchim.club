@@ -8,19 +8,19 @@
 }
 
 .main__intro {
-  background-image: url(../img/intro-back.svg);
+  background-image: url("../img/intro-back.svg");
   background-position: center;
   width: 100%;
   background-repeat: no-repeat;
-  background-color: #FFE9B8;
+  background-color: #ffe9b8;
 
   @include desktop {
-    background-image: url(../img/intro-back-desktop.png);
+    background-image: url("../img/intro-back-desktop.png");
     width: 100%;
     height: 665px;
 
     @include resolution {
-      background-image: url(../img/intro-back-desktop@2x.png);
+      background-image: url("../img/intro-back-desktop@2x.png");
     }
   }
 }
@@ -56,7 +56,7 @@
 }
 
 .main__for-you {
-  background-color: #FFE9B8;
+  background-color: #ffe9b8;
   position: relative;
 
   @include desktop {
@@ -84,7 +84,7 @@
     position: absolute;
     width: 238px;
     height: 238px;
-    background-image: url(../img/like.png);
+    background-image: url("../img/like.png");
     top: 40px;
     left: 50%;
     transform: translateX(-50%);
@@ -120,12 +120,12 @@
 }
 
 .main__author--wrapper {
-  background-color: #FFED00;
+  background-color: #ffed00;
 }
 
 .main__portfolio-wrapper {
   display: grid;
-  grid-template-columns: repeat(2,135px);
+  grid-template-columns: repeat(2, 135px);
   gap: 20px 30px;
   margin: 0 8px;
 
@@ -138,7 +138,7 @@
 }
 
 .main__changes {
-  background-color: #FFE49E;
+  background-color: #ffe49e;
   margin-top: 30px;
 
   @include desktop {
@@ -157,7 +157,7 @@
     position: absolute;
     width: 240px;
     height: 240px;
-    background-image: url(../img/sketchbook.png);
+    background-image: url("../img/sketchbook.png");
     top: 40px;
     left: 50%;
     transform: translateX(-50%);
@@ -172,7 +172,7 @@
   font-size: 21px;
   font-weight: bold;
   margin-top: 5px;
-  color: #FF5959;
+  color: #ff5959;
 
   @include desktop {
     text-align: center;
@@ -183,7 +183,7 @@
 .main__author-link {
   font-family: inherit;
   cursor: pointer;
-  color: #FF5959;
+  color: #ff5959;
   margin: 5px 0 30px;
   font-size: 21px;
   font-weight: bold;

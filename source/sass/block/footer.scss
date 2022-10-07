@@ -1,5 +1,5 @@
 .footer {
-  background-color: #FFED00;
+  background-color: #ffed00;
   padding: 20px 40px;
 
   @include desktop {
@@ -10,7 +10,7 @@
 .footer__link {
   display: block;
   text-decoration: none;
-  color: #000;
+  color: #000000;
   font-family: inherit;
   font-size: 14px;
   text-align: center;
@@ -39,6 +39,5 @@
   @include desktop {
     display: flex;
     flex-wrap: wrap;
-
   }
 }

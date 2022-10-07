@@ -15,13 +15,13 @@
 }
 
 @mixin desktop {
-  @media screen and (min-width: 1250px){
+  @media screen and (min-width: 1250px) {
     @content;
   }
 }
 
 @mixin resolution {
-  @media (min-resolution: 2dppx){
+  @media (min-resolution: 2dppx) {
     @content;
   }
 }

@@ -16,7 +16,7 @@ import ghPages from 'gh-pages';
 // Styles
 
 export const styles = () => {
-  return gulp.src('sass/style.scss', { sourcemaps: true })
+  return gulp.src('source/sass/style.scss', { sourcemaps: true })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
@@ -31,7 +31,7 @@ export const styles = () => {
 // HTML
 
 export const html = () => {
-  return gulp.src('*.html')
+  return gulp.src('source/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
@@ -39,21 +39,21 @@ export const html = () => {
 // Images
 
 export const optimizeImages = () => {
-  return gulp.src('img/**/*.{jpg,png}')
+  return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'))
 }
 
 
 const copyImages = () => {
-  return gulp.src('img/**/*.{jpg,png}')
+  return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(gulp.dest('build/img'))
 }
 
 //WebP
 
 export const createWebp = () => {
-  return gulp.src('img/**/*.{jpg,png}')
+  return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(squoosh({
     webp: {}
   }))
@@ -63,7 +63,7 @@ export const createWebp = () => {
 //SVG
 
 export const svg = () => {
-  return gulp.src(['img/**/*.svg', '!img/icons/*.svg'])
+  return gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'))
 }
@@ -82,9 +82,9 @@ export const svg = () => {
 
 export const copy = () => {
   return gulp.src([
-    'fonts/*.{woff2,woff}',
-    '*.ico',
-    '*.webmanifest'
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+    'source/*.webmanifest'
   ],{
     base: ''
   })
@@ -122,8 +122,8 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch('sass/**/*.scss', gulp.series(styles));
-  gulp.watch('*.html', gulp.series(html, reload));
+  gulp.watch('source/sass/**/*.scss', gulp.series(styles));
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 export const build = gulp.series(

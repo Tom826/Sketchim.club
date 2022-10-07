@@ -7,7 +7,6 @@
   text-transform: uppercase;
   border: none;
   cursor: pointer;
-  padding: 10px;
   display: block;
   text-decoration: none;
   text-align: center;
@@ -17,18 +16,18 @@
 .button--primary-color {
   margin-left: 20%;
   margin-right: -25px;
-  background-color: #FFED00;
+  background-color: #ffed00;
   min-width: 280px;
   height: 58px;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 10px 0 0 10px;
   color: #333;
 
   &:hover {
-    box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.3)
+    box-shadow: 0 -5px 5px 0 rgba(0, 0, 0, 0.3);
   }
 
   &:active {
-    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1)
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
   }
 
   @include desktop {
@@ -39,21 +38,21 @@
 }
 
 .button--secondary-color {
-  background-color: #FF5959;
+  background-color: #ff5959;
   margin-right: 20%;
   margin-left: -25px;
   min-width: 280px;
   height: 58px;
   border-radius: 0 10px 10px 0;
   margin-top: 40px;
-  color: #fff;
+  color: #ffffff;
 
   &:hover {
-    box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.3)
+    box-shadow: 0 -5px 5px 0 rgba(0, 0, 0, 0.3);
   }
 
   &:active {
-    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1)
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
   }
 
   @include desktop {
