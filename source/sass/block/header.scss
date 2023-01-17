@@ -24,6 +24,7 @@
 .header__button {
   display: block;
   background-color: transparent;
+  padding: 10px;
 
   @include desktop {
     display: none;

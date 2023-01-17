@@ -11,6 +11,7 @@ import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgo';
 import svgstore from 'gulp-svgstore';
 import {deleteAsync} from 'del';
+import terser from 'gulp-terser';
 import ghPages from 'gh-pages';
 
 // Styles
@@ -68,15 +69,12 @@ export const svg = () => {
   .pipe(gulp.dest('build/img'))
 }
 
-/*export const sprite = () => {
-  return gulp.src('source/img/icons/*.svg')
-  .pipe(svgo())
-  .pipe(svgstore({
-    inlineSvg: true
-  }))
-  .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img'));
-}*/
+//JS
+export const script = () => {
+  return gulp.src('source/js/*.js')
+  .pipe(terser())
+  .pipe(gulp.dest('build/js'));
+}
 
 //Copy
 
@@ -122,8 +120,9 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/*.html', gulp.series(html, reload));
+  gulp.watch('source/sass/**/*.scss', gulp.series(styles));
+  gulp.watch('source/js/*.js', gulp.series(script));
 }
 
 export const build = gulp.series(
@@ -134,7 +133,7 @@ export const build = gulp.series(
     styles,
     html,
     svg,
-    //sprite,
+    script,
     createWebp
   ),);
 
@@ -146,7 +145,7 @@ export default gulp.series(
     styles,
     html,
     svg,
-    //sprite,
+    script,
     createWebp
   ),gulp.series(
     server,

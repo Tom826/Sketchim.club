@@ -17,17 +17,17 @@
   <body class="page__body">
     <div class="container">
         <header class="header">
-        <button class="header__button button toggle" type="button" onclick="document.querySelector('.navigation__list').classList.remove('navigation__list-closed')">
+        <button class="header__button button toggle" type="button"> <!--onclick="document.querySelector('.navigation__list').classList.remove('navigation__list-closed')"-->
           <span class="visually-hidden">Открыть меню</span>
           <svg class="toggle__open" width="23" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M22.9 0H0v4h22.9V0ZM22.9 9H0v4h22.9V9ZM22.9 18H0v4h22.9v-4Z" fill="#000"/>
           </svg>
         </button>
         <nav class="header__nav navigation">
-          <ul class="navigation__list navigation__list-closed ">
+          <ul class="navigation__list navigation__list-closed">
             <li class="navigation__item">
               <a class="navigation__link navigation__link--current" href="index.html">Главная</a>
-              <button class="navigation__toggle button toggle toggle--closed" type="button" onclick="document.querySelector('.navigation__list').classList.add('navigation__list-closed')">
+              <button class="navigation__toggle button toggle toggle--closed" type="button"> <!--onclick="document.querySelector('.navigation__list').classList.add('navigation__list-closed')"-->
                 <span class="visually-hidden">Кнопка закрыть</span>
                 <svg class="toggle__close" width="23" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M22.2 2.8 19.4 0l-8.3 8.3L2.8 0 0 2.8l8.3 8.3L0 19.4l2.8 2.8 8.3-8.3 8.3 8.3 2.8-2.8-8.3-8.3 8.3-8.3Z" fill="#fff"/>
@@ -145,11 +145,11 @@
           <ul class="hero__list hero__list--price">
             <li class="hero__item hero__item--heart">
               <span>Стоимость при оплате за месяц - </span>
-              <span class="hero__price">690руб.</span>
+              <span class="hero__price">790руб.</span>
             </li>
             <li class="hero__item hero__item--heart">
               <span>Стоимость при оплате за 3 месяца -</span>
-              <span class="hero__price">1790руб.</span>
+              <span class="hero__price">1890руб.</span>
             </li>
           </ul>
           <a class="button button--primary-color" href="https://forms.gle/PQiUsZM5StYx7Bjr6">вступить в клуб</a>
@@ -182,6 +182,8 @@
         </div>
       </footer>
     </div>
+
+    <script src="./js/script.js"></script>
   </body>
 
 </html>
