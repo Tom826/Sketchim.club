@@ -73,7 +73,7 @@ export const svg = () => {
 export const script = () => {
   return gulp.src('source/js/*.js')
   .pipe(terser())
-  .pipe(gulp.dest('build/js'));
+  .pipe(gulp.dest('build/js'))
 }
 
 //Copy

@@ -7,12 +7,12 @@ const nav__list = document.querySelector(".navigation__list");
 const menu_open = function() {
     nav__list.classList.toggle('navigation__list-closed');
     nav__list.classList.toggle('navigation__list-opened');
-};
+}
 
 const menu_close = function() {
     nav__list.classList.toggle('navigation__list-closed');
     nav__list.classList.toggle('navigation__list-opened');
-};
+}
 
 button.addEventListener('click', menu_open);
 toggle.addEventListener('click', menu_close);
