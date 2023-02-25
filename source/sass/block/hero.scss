@@ -57,7 +57,7 @@
   &::after {
     content: "";
     position: absolute;
-    background-image: url("../../img/pensils.png");
+    background-image: url("../img/pensils.png");
     width: 234px;
     height: 248px;
     bottom: 90px;
@@ -83,6 +83,7 @@
 
 .hero__list {
   list-style-type: none;
+  padding-left: 30px;
 
   &--ordered {
     counter-reset: changes-list;
@@ -99,7 +100,7 @@
     &--price {
       display: flex;
       justify-content: space-around;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
   }
 }
@@ -157,6 +158,15 @@
     }
   }
 
+  &--lady {
+    margin: 30px 0 0 30px;
+
+    @include desktop {
+      margin: 30px auto;
+      min-width: 352px;
+    }
+  }
+
   @include desktop {
     &--heart {
       display: block;
@@ -190,4 +200,11 @@
   @include desktop {
     margin-top: 20px;
   }
+}
+
+.hero__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 30px;
+  justify-content: center;
 }

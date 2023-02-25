@@ -1,6 +1,7 @@
 const button = document.querySelector(".header__button");
 const toggle = document.querySelector(".navigation__toggle");
 const nav__list = document.querySelector(".navigation__list");
+//const img = document.querySelector()
 
 //console.dir('button');
 

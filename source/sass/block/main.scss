@@ -4,6 +4,7 @@
 
   &--policy {
     padding: 0 12px;
+    margin: 20px 0;
   }
 }
 
@@ -123,6 +124,12 @@
   background-color: #ffed00;
 }
 
+.main__portfolio {
+  @include desktop {
+    padding: 58px 80px 100px;
+  }
+}
+
 .main__portfolio-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 135px);
@@ -130,8 +137,10 @@
   margin: 0 8px;
 
   @include desktop {
+    min-height: 550px;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 60px 0 0 30px;
     gap: 30px;
   }
@@ -194,13 +203,26 @@
   display: block;
   margin: 0 auto;
   margin-bottom: 30px;
+  cursor: pointer;
+
+  &:hover {
+    width: 260px;
+    height: 320px;
+    margin: 10px 13px;
+  }
 
   @include desktop {
-    width: 330px;
-    height: 413px;
+    width: 320px;
+    height: 400px;
 
     &--none {
       display: none;
+    }
+
+    &:hover {
+      width: 294px;
+      height: 380px;
+      margin: 10px 13px;
     }
   }
 }

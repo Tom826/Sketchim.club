@@ -61,3 +61,13 @@
     border-radius: 20px;
   }
 }
+
+.button__lady {
+  margin: 20px 0 0 -26px;
+  padding: 16px 10px;
+  min-width: 300px;
+
+  @include desktop {
+    margin: 10px auto;
+  }
+}
