@@ -46,6 +46,11 @@
     margin-bottom: 5px;
   }
 
+  &--slider {
+    text-align: end;
+    margin-bottom: 18px;
+  }
+
   @include desktop {
     text-align: center;
   }
@@ -158,15 +163,6 @@
     }
   }
 
-  &--lady {
-    margin: 30px 0 0 30px;
-
-    @include desktop {
-      margin: 30px auto;
-      min-width: 352px;
-    }
-  }
-
   @include desktop {
     &--heart {
       display: block;
@@ -207,4 +203,13 @@
   flex-wrap: wrap;
   gap: 10px 30px;
   justify-content: center;
+}
+
+.hero__item--lady  {
+  margin: 30px 0 0 30px;
+
+  @include desktop {
+    margin: 30px auto;
+    min-width: 352px;
+  }
 }

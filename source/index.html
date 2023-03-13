@@ -139,7 +139,93 @@
             <li class="hero__item hero__item--ordered">Новый круг друзей-единомышленников, которые всегда поддержат</li>
           </ul>
         </section>
-        <section class="main__price hero hero--price hero--with-photo">
+        <section class="main__galery galery">
+          <h2 class="hero__tittle hero__tittle--slider">Работы учеников:</h2>
+          <div class="galery__slider slider">
+            <div class="slider__wrapper">
+              <div class="slider__img-wrapper">
+                <div class="slider__inner">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/student_works/stud-winter-desktop.webp, img/student_works/stud-winter-desktop@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/student_works/stud-winter-desktop.jpg, img/student_works/stud-winter-desktop@2x.jpg 2x">
+                    <img class="slider__img" src="img/student_works/stud-winter-mob.jpg" srcset="img/student_works/stud-winter-mob@2x.jpg" width="200" height="256" alt="Деревянный домик в лесу в снегу.">
+                  </picture>
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/student_works/stud-pumpkin-desktop.webp, img/student_works/stud-pumpkin-desktop@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/student_works/stud-pumpkin-desktop.jpg, img/student_works/stud-pumpkin-desktop@2x.jpg 2x">
+                    <img class="slider__img" src="img/student_works/stud-pumpkin-mob.jpg" srcset="img/student_works/stud-pumpkin-mob@2x.jpg" width="200" height="255" alt="Капкейк и тыква в стиле Хелоуин.">
+                  </picture>
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/student_works/stud-cake-desktop.webp, img/student_works/stud-cake-desktop@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/student_works/stud-cake-desktop.jpg, img/student_works/stud-cake-desktop@2x.jpg 2x">
+                    <img class="slider__img" src="img/student_works/stud-cake-mob.jpg" srcset="img/student_works/stud-cake-mob@2x.jpg" width="200" height="255" alt="Рождественский кекс с палочками корицы, еловыми ветками и мандаринами.">
+                  </picture>
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/student_works/stud-burg-desktop2.webp, img/student_works/stud-burg-desktop2@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/student_works/stud-burg-desktop2.jpg, img/student_works/stud-burg-desktop2@2x.jpg 2x">
+                    <img class="slider__img" src="img/student_works/stud-burg-mob2.jpg" srcset="img/student_works/stud-burg-mob2@2x.jpg" width="200" height="256" alt="Деревянный домик в лесу в снегу.">
+                  </picture>
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/student_works/stud-tram-desktop.webp, img/student_works/stud-tram-desktop@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/student_works/stud-tram-desktop.jpg, img/student_works/stud-tram-desktop@2x.jpg 2x">
+                    <img class="slider__img" src="img/student_works/stud-tram-mob.jpg" srcset="img/student_works/stud-tram-mob@2x.jpg" width="200" height="255" alt="Капкейк и тыква в стиле Хелоуин.">
+                  </picture>
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/student_works/stud-sweet-desktop.webp, img/student_works/stud-sweet-desktop@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/student_works/stud-sweet-desktop.jpg, img/student_works/stud-sweet-desktop@2x.jpg 2x">
+                    <img class="slider__img" src="img/student_works/stud-sweet-mob.jpg" srcset="img/student_works/stud-sweet-mob@2x.jpg" width="200" height="255" alt="Рождественский кекс с палочками корицы, еловыми ветками и мандаринами.">
+                  </picture>
+                </div>
+              </div>
+              <div class="slider__controls controls">
+                <button class="controls__button controls__button--next button">
+                  <span class="visually-hidden">Следующий слайд</span>
+                </button>
+                <button class="controls__button controls__button--prev button">
+                  <span class="visually-hidden">Предыдущий слайд</span>
+                </button>
+              </div>
+              <!-- <ol class="controls__list list">
+                <li class="list__item">
+                  <button class="list__button">
+                    <span class="visually-hidden">1 фото</span>
+                  </button>
+                </li>
+                <li class="list__item">
+                  <button class="list__button">
+                    <span class="visually-hidden">2 фото</span>
+                  </button>
+                </li>
+                <li class="list__item">
+                  <button class="list__button">
+                    <span class="visually-hidden">3 фото</span>
+                  </button>
+                </li>
+                <li class="list__item">
+                  <button class="list__button">
+                    <span class="visually-hidden">3 фото</span>
+                  </button>
+                </li>
+                <li class="list__item">
+                  <button class="list__button">
+                    <span class="visually-hidden">3 фото</span>
+                  </button>
+                </li>
+                <li class="list__item">
+                  <button class="list__button">
+                    <span class="visually-hidden">3 фото</span>
+                  </button>
+                </li>
+              </ol> -->
+              <div class="controls__counter counter">
+                <span id='current' class="counter__item">1</span>
+                /
+                <span id='total' class="counter__item">3</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main__price hero hero--price ">
           <h2 class="hero__tittle hero__tittle--price">Двери клуба открываются</h2>
           <p class="main__price-info">раз в месяц на несколько дней:</p>
           <ul class="hero__list hero__list--price">
@@ -155,7 +241,7 @@
           <a class="button button--primary-color" href="https://forms.gle/PQiUsZM5StYx7Bjr6">вступить в клуб</a>
           <div class="hero__item hero__item--heart hero__item--lady">
             <span>Скетч-интенсив «Для леди (Отдельно от клуба)» - </span>
-            <span class="hero__price">690руб.</span>
+            <span class="hero__price">890руб.</span>
           </div>
           <a class="button button--secondary-color button__lady" href="https://forms.gle/xBvz89QsqoN3rRsy5">Иду на скетч-интенсив</a>
         </section>

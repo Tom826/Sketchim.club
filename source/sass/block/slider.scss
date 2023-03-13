@@ -1,0 +1,50 @@
+.slider__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider__img-wrapper {
+    // display: flex;
+    // justify-content: center;
+    width: 100%;
+    padding: 0 50px;
+    margin: 0 auto;
+    // align-items:center;
+
+    @include desktop {
+        //gap: 28px;
+    }
+}
+
+.slider__inner {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    transition: 0.5 all;
+    margin: 0 auto;
+
+    transform: translateX(500px);
+
+    @include desktop {
+        // gap: 38px;
+    }
+}
+
+.slider__img {
+    display: block;
+    margin: 0 auto;
+
+    &--hidden {
+        display: none;
+    }
+
+    @include desktop {
+        &--hidden {
+            display: block;
+        }
+
+        width: 320px;
+        height: 430px;
+    }
+}

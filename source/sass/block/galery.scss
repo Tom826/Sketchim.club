@@ -1,0 +1,5 @@
+.galery {
+    @include desktop{
+        padding: 60px 30px 10px;
+    }
+}

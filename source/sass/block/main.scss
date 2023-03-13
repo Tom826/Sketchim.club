@@ -159,22 +159,22 @@
   position: relative;
   margin-bottom: 50px;
 
-  &::before {
-    @include background-img;
+  // &::before {
+  //   @include background-img;
 
-    content: "";
-    position: absolute;
-    width: 240px;
-    height: 240px;
-    background-image: url("../img/sketchbook.png");
-    top: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+  //   // content: "";
+  //   // position: absolute;
+  //   // width: 240px;
+  //   // height: 240px;
+  //   // background-image: url("../img/sketchbook.png");
+  //   // top: 40px;
+  //   // left: 50%;
+  //   // transform: translateX(-50%);
 
-    @include desktop {
-      display: none;
-    }
-  }
+  //   @include desktop {
+  //     display: none;
+  //   }
+  // }
 }
 
 .main__price-info {
@@ -197,6 +197,12 @@
   font-size: 21px;
   font-weight: bold;
   text-decoration: none;
+
+  @include desktop {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .main__portfolio-img {
@@ -206,9 +212,7 @@
   cursor: pointer;
 
   &:hover {
-    width: 130px;
-    height: 150px;
-    margin: 10px 3px;
+    box-shadow: 8px 8px 12px grey;
   }
 
   @include desktop {
@@ -229,4 +233,8 @@
 
 .main__content {
   padding: 0 12px;
+}
+
+.main__galery {
+  padding: 0 25px;
 }

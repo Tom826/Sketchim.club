@@ -1,0 +1,57 @@
+.controls__button {
+    position: absolute;
+    background-color: aquamarine;
+    cursor: pointer;
+    border-radius: 30%;
+
+    &--next {
+        right: 0;
+        top: 32%;
+        background-image: url('../img/icon/next-mob.svg');
+        width: 42px;
+        height: 30px;
+        background-repeat: no-repeat;
+
+        @include desktop {
+            background-image: url('../img/icon/next-desck.svg');
+            width: 72px;
+            height: 48px;
+        }
+
+        &:hover {
+            box-shadow: 4px 4px 8px rgb(0 0 0 / 30%);
+        }
+    }
+
+    &--prev {
+        //left: 10px;
+        top: 32%;
+        background-image: url('../img/icon/prev-mob.svg');
+        width: 42px;
+        height: 30px;
+
+        @include desktop {
+            background-image: url('../img/icon/prev-desck.svg');
+            width: 72px;
+            height: 48px;
+        }
+
+        &:hover {
+            box-shadow: -4px 4px 8px rgb(0 0 0 / 30%);
+        }
+    }
+}
+
+.controls__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    @include desktop {
+        margin-top: 20px;
+    }
+}
+
+.controls__counter {
+    margin: 10px auto;
+}
