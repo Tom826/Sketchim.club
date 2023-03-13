@@ -212,7 +212,7 @@
   cursor: pointer;
 
   &:hover {
-    box-shadow: 8px 8px 12px grey;
+    box-shadow: 8px 8px 12px #808080;
   }
 
   @include desktop {
