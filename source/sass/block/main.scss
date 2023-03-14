@@ -8,6 +8,10 @@
   }
 }
 
+.main__title {
+  line-height: normal;
+}
+
 .main__intro {
   background-image: url("../img/intro-back.svg");
   background-position: center;
@@ -126,7 +130,7 @@
 
 .main__portfolio {
   @include desktop {
-    padding: 58px 80px 100px;
+    padding: 58px 80px 70px;
   }
 }
 
