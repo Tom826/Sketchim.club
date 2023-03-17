@@ -13,19 +13,19 @@
 }
 
 .main__intro {
-  background-image: url("../img/intro-back.svg");
-  background-position: center;
+  background-image: url("../img/hero-back-mob.svg");
+  background-position: top;
   width: 100%;
   background-repeat: no-repeat;
-  background-color: #ffe9b8;
+  background-color: rgb(255, 255, 255);
 
   @include desktop {
-    background-image: url("../img/intro-back-desktop.png");
+    background-image: url("../img/hero-back-desk.svg");
     width: 100%;
     height: 665px;
 
     @include resolution {
-      background-image: url("../img/intro-back-desktop@2x.png");
+      background-image: url("../i mg/intro-back-desktop@2x.png");
     }
   }
 }
@@ -52,7 +52,7 @@
 }
 
 .main__hero {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   position: relative;
 
   @include desktop {
@@ -61,10 +61,15 @@
 }
 
 .main__for-you {
-  background-color: #ffe9b8;
+  background-image: url("../img/back-for-you-mob.svg");
+  background-repeat: no-repeat;
+  background-position: top;
   position: relative;
 
   @include desktop {
+    background-image: none;
+    background-color: rgba(255, 237, 189, 1);
+
     &::before {
       content: "";
       position: absolute;
@@ -90,7 +95,7 @@
     width: 238px;
     height: 238px;
     background-image: url("../img/like.png");
-    top: 40px;
+    top: 26px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -113,19 +118,57 @@
 
 .main__author-img {
   display: block;
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 0 24%;
+  margin-top: 10%;
 
   @include desktop {
     position: absolute;
-    top: -60px;
-    left: 60px;
+    top: 29%;
+    left: -23%;
+    z-index: 1;
+    width: 350px;
+    height: 366px;
   }
 }
 
 .main__author--wrapper {
-  background-color: #ffed00;
+  background-color: rgba(255, 233, 184, 1);
+  padding: 20px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: 2%;
+    width: 216px;
+    height: 228px;
+
+    @include background-img;
+
+    background-image: url("../img/icon/arr-black1-mob.svg");
+  }
+
+  @include desktop {
+    background-color: rgb(255, 255, 255);
+
+    @include background-img;
+
+    background-image: url("../img/author-back-desk.svg");
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -18%;
+      left: -1%;
+      width: 414px;
+      height: 404px;
+
+      @include background-img;
+
+      background-image: url("../img/icon/arr-white1-author-desk.svg");
+    }
+  }
 }
 
 .main__portfolio {
@@ -151,11 +194,38 @@
 }
 
 .main__changes {
-  background-color: #ffe49e;
-  margin-top: 30px;
+  background-color: rgb(255, 255, 255);
+
+  @include background-img;
+
+  background-image: url("../img/changes-back-mob.svg");
+  width: 364px;
+  height: 580px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -12%;
+    left: 26%;
+    width: 120px;
+    height: 100px;
+
+    @include background-img;
+
+    background-image: url("../img/icon/arr-black2-mob.svg");
+  }
 
   @include desktop {
     margin: 0;
+    width: 100%;
+    height: auto;
+    background-image: none;
+    background-color: rgba(255, 237, 189, 1);
+
+    &::after {
+      display: none;
+    }
   }
 }
 

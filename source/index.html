@@ -16,7 +16,7 @@
 
   <body class="page__body">
     <div class="container">
-        <header class="header">
+      <header class="header">
         <button class="header__button button toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
           <svg class="toggle__open" width="23" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +56,7 @@
         </section>
         <section class="main__hero hero hero--intro">
           <h2 class="hero__tittle">Скетчим.club</h2>
-          <p class="hero__text hero__text--with-photo">- это место, в котором не просто учат рисовать. Это сообщество единомышленников, это вдохновение и поддержка, это развитие и самореализация!</p>
+          <p class="hero__text">- это место, в котором не просто учат рисовать. Это сообщество единомышленников, это вдохновение и поддержка, это развитие и самореализация!</p>
           <a class="button button--primary-color" href="https://forms.gle/PQiUsZM5StYx7Bjr6">вступить в клуб</a>
         </section>
         <section class="main__for-you hero hero--for-you">
@@ -88,7 +88,9 @@
         </section>
         <section class="main__author">
           <picture>
-            <img class="main__author-img" src="img/author.png" width="238" height="238" alt="Остовательница клуба: Ирина Коваленко">
+            <source type="image/webp" srcset="img/author-desk.webp, img/author-desk@2x.webp 2x">
+            <source media="(min-width: 1550px)" srcset="img/author-desk.png, img/author-desk@2x.png 2x">
+            <img class="main__author-img" src="img/author-mob.png" srcset="img/author-mob@2x.png" width="290" height="300" alt="Остовательница клуба: Ирина Коваленко">
           </picture>
           <div class="main__author--wrapper hero hero--author">
             <h2 class="hero__tittle hero__tittle--author">Основатель клуба Ирина&nbsp;Коваленко</h2>
@@ -137,8 +139,8 @@
           </div>
           <a class="button button--secondary-color" href="galery.html">показать больше</a>
         </section>
-        <section class="main__changes hero">
-          <h2 class="hero__tittle">Какие изменения вас ждут при вступлении в клуб:</h2>
+        <section class="main__changes hero hero--changes">
+          <h2 class="hero__tittle hero__tittle--changes">Какие изменения вас ждут при вступлении в клуб:</h2>
           <ul class="hero__list hero__list--ordered">
             <li class="hero__item hero__item--ordered">Уверенный навык рисования</li>
             <li class="hero__item hero__item--ordered">Качественно оформленные аккаунты в соцсетях, которые работают как портфолио</li>
@@ -237,17 +239,17 @@
           <h2 class="hero__tittle hero__tittle--price">Двери клуба открываются</h2>
           <p class="main__price-info">раз в месяц на несколько дней:</p>
           <ul class="hero__list hero__list--price">
-            <li class="hero__item hero__item--heart">
+            <li class="hero__item hero__item--arr-down hero__item--heart">
               <span>Стоимость при оплате за месяц - </span>
               <span class="hero__price">790руб.</span>
             </li>
-            <li class="hero__item hero__item--heart">
+            <li class="hero__item hero__item--arr-left hero__item--heart">
               <span>Стоимость при оплате за 3 месяца&nbsp-</span>
               <span class="hero__price">1890руб.</span>
             </li>
           </ul>
           <a class="button button--primary-color" href="https://forms.gle/PQiUsZM5StYx7Bjr6">вступить в клуб</a>
-          <div class="hero__item hero__item--heart hero__item--lady">
+          <div class="hero__item hero__item--arr-right hero__item--heart hero__item--lady">
             <span>Скетч-интенсив «Для леди (Отдельно от клуба)» - </span>
             <span class="hero__price">890руб.</span>
           </div>
@@ -255,7 +257,7 @@
         </section>
       </main>
 
-      <div class="footer">
+      <footer class="footer">
         <div class="footer__wrapper">
           <a class="footer__link" href="galery.html">
             <span>Работы преподавятеля</span>

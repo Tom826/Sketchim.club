@@ -16,11 +16,11 @@
 .button--primary-color {
   margin-left: 20%;
   margin-right: -25px;
-  background-color: #ffed00;
+  background-color: rgb(252, 89, 89);
   min-width: 280px;
   height: 58px;
   border-radius: 10px 0 0 10px;
-  color: #333333;
+  color: rgb(255, 255, 255);
 
   &:hover {
     box-shadow: 0 -5px 5px 0 rgba(0, 0, 0, 0.3);
@@ -44,7 +44,7 @@
   min-width: 280px;
   height: 58px;
   border-radius: 0 10px 10px 0;
-  margin-top: 40px;
+  margin-top: 30px;
   color: #ffffff;
 
   &:hover {
@@ -66,8 +66,11 @@
   margin: 20px 0 0 -26px;
   padding: 16px 10px;
   min-width: 300px;
+  background-color: rgba(255, 184, 200, 1);
+  color: rgba(0, 0, 0);
 
   @include desktop {
-    margin: 10px auto;
+    margin: 10px;
+    margin-left: auto;
   }
 }

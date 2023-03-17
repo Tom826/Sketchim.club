@@ -1,9 +1,17 @@
 .hero {
-  padding: 8px 25px 8px;
+  padding: 8px 25px;
 
   &--with-photo {
     padding-top: 300px;
     padding-bottom: 0;
+  }
+
+  &--portfolio {
+    padding-bottom: 0;
+  }
+
+  &--changes {
+    padding-top: 40px;
   }
 
   @include desktop {
@@ -29,6 +37,10 @@
       padding: 50px 0 20px;
     }
 
+    &--changes {
+      padding-top: 58px 40px 10px;
+    }
+
     &--price {
       padding: 60px 100px 10px;
     }
@@ -36,7 +48,9 @@
 }
 
 .hero__tittle {
-  margin: 30px 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  line-height: normal;
 
   &--price {
     margin-bottom: 5px;
@@ -48,33 +62,42 @@
 
   &--slider {
     text-align: end;
-    margin-bottom: 18px;
+    margin-bottom: 30px;
+    margin-top: -38px;
+    margin-left: 100px;
+    padding-right: 20px;
+    position: relative;
   }
 
   @include desktop {
     text-align: center;
+
+    &--changes {
+      width: 516px;
+      margin: 0 auto;
+    }
   }
 }
 
 .hero__text {
   margin: 20px 0;
 
-  &::after {
-    content: "";
-    position: absolute;
-    background-image: url("../img/pensils.png");
-    width: 234px;
-    height: 248px;
-    bottom: 90px;
-    left: 50%;
-    transform: translateX(-50%);
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   background-image: url("../img/pensils.png");
+  //   width: 234px;
+  //   height: 248px;
+  //   bottom: 90px;
+  //   left: 50%;
+  //   transform: translateX(-50%);
 
-    @include background-img;
+  //   @include background-img;
 
-    @include desktop {
-      display: none;
-    }
-  }
+  //   @include desktop {
+  //     display: none;
+  //   }
+  // }
 
   &--with-photo {
     margin-bottom: 290px;
@@ -99,13 +122,14 @@
     padding: 30px 0 0 50px;
 
     &--author {
-      padding: 30px 0 0 208px;
+      padding: 30px 0 0 356px;
     }
 
     &--price {
       display: flex;
-      justify-content: space-around;
-      margin-bottom: 30px;
+      justify-content: start;
+      gap: 32%;
+      margin-bottom: 80px;
     }
   }
 }
@@ -119,12 +143,12 @@
     position: absolute;
     color: #333333;
     width: 10px;
-    height: 10px;
-    background-color: #43effa;
+    height: 7px;
+    background-color: rgba(143, 216, 248, 1);
     border-radius: 50%;
-    border: #333333 solid 1px;
+    border: rgba(0, 0, 0, 0.5) solid 1px;
     left: -28px;
-    top: 5px;
+    top: 8px;
   }
 
   &--check::before {
@@ -173,6 +197,39 @@
       padding: 40px;
       text-align: center;
     }
+
+    &--arr-down::after {
+      @include background-img;
+      background-image: url("../img/icon/arr-black2-price-1.svg");
+      position: absolute;
+      content: "";
+      width: 150px;
+      height: 110px;
+      top: 96%;
+    }
+    
+    &--arr-left::after {
+      position: absolute;
+      content: "";
+      width: 150px;
+      height: 110px;
+      background-image: url("../img/icon/arr-black2-price.svg");
+
+      @include background-img;
+      top: 58%;
+      left: -41%;
+    }
+
+    &--arr-right::after {
+      position: absolute;
+      content: "";
+      width: 150px;
+      height: 110px;
+      background-image: url("../img/icon/arr-black2-price-2.svg");
+
+      @include background-img;
+      left: 95%;
+    }
   }
 }
 
@@ -209,7 +266,7 @@
   margin: 30px 0 0 30px;
 
   @include desktop {
-    margin: 30px auto;
+    margin: 5% 20%;
     min-width: 352px;
   }
 }
