@@ -82,23 +82,6 @@
 .hero__text {
   margin: 20px 0;
 
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   background-image: url("../img/pensils.png");
-  //   width: 234px;
-  //   height: 248px;
-  //   bottom: 90px;
-  //   left: 50%;
-  //   transform: translateX(-50%);
-
-  //   @include background-img;
-
-  //   @include desktop {
-  //     display: none;
-  //   }
-  // }
-
   &--with-photo {
     margin-bottom: 290px;
 
@@ -106,6 +89,31 @@
       text-align: center;
       margin-bottom: 54px;
     }
+  }
+}
+
+.hero__text--video {
+  @include desktop {
+    text-align: center;
+  }
+}
+
+div.hero__video-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px 0;
+}
+
+div.hero__video-block > .hero__video {
+  width: 100%;
+  height: 180px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 22px;
+
+  @include desktop {
+    width: 65%;
+    height: 326px;
   }
 }
 
@@ -270,3 +278,4 @@
     min-width: 352px;
   }
 }
+

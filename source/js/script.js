@@ -20,236 +20,214 @@ toggle.addEventListener('click', menu_close);
 
 
 //slider
-const wrapper = document.querySelector('.slider__img-wrapper'),
-    inner= document.querySelector('.slider__inner'),
-    slides= document.querySelectorAll('.slider__img'),
-    next= document.querySelector('.controls__button--next'),
-    prev= document.querySelector('.controls__button--prev'), 
-    dots= document.querySelectorAll('.list__button'),
-    current= document.querySelector('#current'), 
-    width = window.getComputedStyle(wrapper).width,
-    total= document.querySelector('#total');
-let index = 1; // будет определять наш текущий слайд
-    // offset = 0;
-let curSld = 1,
-    maxSld = slides.length,
-    len = slides.length-1;
+const imgArr= document.querySelectorAll('.slider__img'),
+      btnNext= document.querySelector('.controls__button--next'),
+      btnPrev= document.querySelector('.controls__button--prev'), 
+      curNum= document.querySelector('#current'), 
+      wrapper= document.querySelector('.slider__img-wrapper'),
+      maxNum= document.querySelector('#total'),
+      width = window.getComputedStyle(wrapper).width;
+let index = 0, // будет определять наш текущий слайд
+    curSld = 1,
+    len = imgArr.length;
 
-if(slides.length > 0) {
-    if(width === '1190px') {
-        total.textContent = len;    
-    } else {
-        total.textContent = slides.length;
-    }
-} else {
-    console.log('Error');
+console.log(width);
+
+curNum.textContent = curSld;
+maxNum.textContent = len;
+
+function transferNext(i) {
+  if(curSld == len) {
+    index = 0;
+    curSld = 1;
+    i.forEach(e => {
+      if(width == "1190px") {
+        e.style.transform = `translateX(${index * (-118)}%)`;
+      }
+      else {
+        e.style.transform = `translateX(${index * (-108)}%)`;
+      }
+    })
+  }
+  else {
+    index++;
+    curSld++;
+    i.forEach(e => {
+      if(width == "1190px") {
+        e.style.transform = `translateX(${index * (-118)}%)`;
+      }
+      else {
+        e.style.transform = `translateX(${index * (-108)}%)`;
+      }
+    })
+  }  
+  curNum.textContent = curSld;
 }
 
-
-function dotFill (sld) {
-    dots.forEach((el, i) => {
-        if(i === sld) {
-            el.classList.add('list__button--current-dot');
-        } else if(el.classList.contains('list__button--current-dot')) {
-            el.classList.remove('list__button--current-dot');
-        }
+function transferPrev(i) {
+  if(curSld == 1) {
+    index = len-1;
+    curSld = len;
+    i.forEach(e => {
+      if(width == "1190px") {
+        e.style.transform = `translateX(${index * (-118)}%)`;
+      }
+      else {
+        e.style.transform = `translateX(${index * (-108)}%)`;
+      }
     })
-};
-
-function init() {
-    showSlds(0);
-    //dotFill(0);
-};
+  }
+  else {
+    index--;
+    curSld--;
+    i.forEach(e => {
+      if(width == "1190px") {
+        e.style.transform = `translateX(${index * (-118)}%)`;
+      }
+      else {
+        e.style.transform = `translateX(${index * (-108)}%)`;
+      }
+    })    
+  }
+  curNum.textContent = curSld;
+}
 
 wrapper.style.overflow = 'hidden';
 
-// console.log(width);
-// console.log(curSld);
+btnNext.addEventListener('click', () => {
+  transferNext(imgArr);
+})
 
+btnPrev.addEventListener('click', () => {
+  transferPrev(imgArr);
+})
 
-function showSlds (sldNum) {
-    slides.forEach((s, i) => {
-        s.style.transform = `translateX(${(i - sldNum) * 100}%)`;
-    
-        if(i === sldNum) s.classList.add('list__button--current-dot');
-        else {
-            s.classList.remove('list__button--current-dot');
-        }
-    })
-};
-
-
-function nextSld() {
-    if(curSld === 1) {
-        curSld === maxSld ? curSld = 0 : curSld++; 
-    } else {
-        if(width == '320px') {
-            curSld === maxSld + 4 ? curSld = 0 : curSld = 2 + curSld;
-
-        } else {
-            curSld === maxSld + 2 ? curSld = 0 : curSld = 2 + curSld;
-        }
-    }
-
-    if(width === '1190px') {
-        if(index == len) {
-            index = 1;
-        } else {
-            index++;
-        }
-    } else if(index == slides.length) {
-        index = 1;
-    } else {
-        index++;
-    }
-
-    
-    current.textContent = index;
-
-    showSlds(curSld);
-    // dotFill(curSld);    
-};
-
-function prevSld() {
-    if(width == '320px') {
-        if(curSld == 1) {
-            curSld = maxSld + 4
-        } else {
-            curSld > 0 ? curSld = curSld - 2 : (curSld = maxSld + 4);
-            console.log('first');
-        }
-    } else {
-        curSld > 0 ? curSld = curSld - 2 : (curSld = maxSld + 2);
-        console.log('Error');
-    }
-
-    if(width === '1190px') {
-        if(index == 1) {
-            index = len;
-        } else {
-            index--;
-        }
-    } else if(index == 1) {
-        index = slides.length;
-    } else {
-        index--;
-    }
-
-
-    current.textContent = index;
-
-    showSlds(curSld);
-    // dotFill(curSld); 
-};
-
-next.addEventListener('click', nextSld);
-prev.addEventListener('click', prevSld);
-
-// dots.forEach((el, i) => {
-//     el.addEventListener('click', () => {
-//         console.log('i '+i)
-//         dotFill(i);
-//         showSlds(i+1);
-//     })
-// });
-
-init();
-
-
-// if(onlyNums(width) > 300) {
-//     console.log(slides.length/2)
-//     //desk
-//     if(slides.length > 0) {
-//         total.textContent = slides.length/2;
-//     } else {
-//         console.log('Error');
-//     }
-
-//     slides.forEach(slds => {
-//         slds.style.width = onlyNums(width);
-//     })
-
-//     // wrapper.style.border = '2px red solid';
-// }
-
+//slider
+// const wrapper = document.querySelector('.slider__img-wrapper'),
+//     inner= document.querySelector('.slider__inner'),
+//     slides= document.querySelectorAll('.slider__img'),
+//     next= document.querySelector('.controls__button--next'),
+//     prev= document.querySelector('.controls__button--prev'), 
+//     dots= document.querySelectorAll('.list__button'),
+//     current= document.querySelector('#current'), 
+//     width = window.getComputedStyle(wrapper).width,
+//     total= document.querySelector('#total');
+// let index = 1; // будет определять наш текущий слайд
+//     // offset = 0;
+// let curSld = 1,
+//     maxSld = slides.length,
+//     len = slides.length-1;
 
 // if(slides.length > 0) {
-//     total.textContent = slides.length;
+//     if(width === '1190px') {
+//         total.textContent = len;    
+//     } else {
+//         total.textContent = slides.length;
+//     }
 // } else {
 //     console.log('Error');
 // }
 
-// inner.style.width = slides.length * 100 + '%';
+
+// function dotFill (sld) {
+//     dots.forEach((el, i) => {
+//         if(i === sld) {
+//             el.classList.add('list__button--current-dot');
+//         } else if(el.classList.contains('list__button--current-dot')) {
+//             el.classList.remove('list__button--current-dot');
+//         }
+//     })
+// };
+
+// function init() {
+//     showSlds(0);
+//     //dotFill(0);
+// };
 
 // wrapper.style.overflow = 'hidden';
 
-// slides.forEach(slds => {
-//     slds.style.width = onlyNums(width);
-// })
+// console.log(width);
+// console.log(curSld);
+// console.log(maxSld);
 
-// function onlyNums(num) {
-//     return +num.slice(0, num.length - 5);
-// }
 
-// // console.log(onlyNums(width));
+// function showSlds (sldNum) {
+//     slides.forEach((s, i) => {
+//         s.style.transform = `translateX(${(i - sldNum) * 100}%)`;
+    
+//         if(i === sldNum) s.classList.add('list__button--current-dot');
+//         else {
+//             s.classList.remove('list__button--current-dot');
+//         }
+//     })
+// };
 
-// next.addEventListener('click', () => {
-//     if(offset == onlyNums(width) * (slides.length - 1)) {
-//         offset = 0;
+
+// function nextSld() {
+//     if(curSld === 1) {
+//         curSld === maxSld ? curSld = 0 : curSld++; 
 //     } else {
-//         offset += onlyNums(width);
+//         if(width == '320px') {
+//             curSld === maxSld + 4 ? curSld = 0 : curSld = 2 + curSld;
+
+//         } else {
+//             curSld === maxSld + 2 ? curSld = 0 : curSld = 2 + curSld;
+//         }
 //     }
 
-//     inner.style.transform = `translateX(-${offset}px)`;
-
-//     if(index == slides.length) {
+//     if(width === '1190px') {
+//         if(index == len) {
+//             index = 1;
+//         } else {
+//             index++;
+//         }
+//     } else if(index == slides.length) {
 //         index = 1;
 //     } else {
 //         index++;
 //     }
-//     current.textContent = index;
-// })
 
-// prev.addEventListener('click', () => {
-//     if(offset == 0) {
-//         offset = onlyNums(width) * (slides.length -1);
+    
+//     current.textContent = index;
+
+//     showSlds(curSld);
+//     // dotFill(curSld);    
+// };
+
+// function prevSld() {
+//     if(width == '320px') {
+//         if(curSld == 1) {
+//             curSld = maxSld + 4
+//         } else {
+//             curSld > 0 ? curSld = curSld - 2 : (curSld = maxSld + 4);
+//             console.log('first');
+//         }
 //     } else {
-//         offset -= onlyNums(width);
+//         curSld > 0 ? curSld = curSld - 2 : (curSld = maxSld + 2);
+//         console.log('Error');
 //     }
 
-//     inner.style.transform = `translateX(-${offset}px)`;
-
-//     if(index == 1) {
+//     if(width === '1190px') {
+//         if(index == 1) {
+//             index = len;
+//         } else {
+//             index--;
+//         }
+//     } else if(index == 1) {
 //         index = slides.length;
 //     } else {
 //         index--;
 //     }
+
+
 //     current.textContent = index;
-// })
 
-// showSlds(index);
+//     showSlds(curSld);
+//     // dotFill(curSld); 
+// };
 
-// function showSlds(i) {
-//     // проверка на начало-конец
-//     if(i > slides.length) {
-//         index = 1;
-//     }
-//     if(i < 1) {
-//         index = slides.length;
-//     }
+// next.addEventListener('click', nextSld);
+// prev.addEventListener('click', prevSld);
 
-//     slides.forEach(item => item.style.display = 'none');
-//     slides[index-1].style.display = 'block';
-
-//     if(slides.length) {
-//         current.textContent = index;
-//     } else {
-//         console.log('Error');
-//     }
-// }
-
-// function changeSld(n) {
-//     showSlds(index += n);
-// }
-
+// init();
 

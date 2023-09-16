@@ -6,7 +6,7 @@
 
 .slider__img-wrapper {
   width: 100%;
-  padding: 0 50px;
+  // padding: 0 50px;
   margin: 0 auto;
 }
 
@@ -16,8 +16,13 @@
   align-items: center;
   transition: 0.5 all;
   margin: 0 auto;
+  gap: 0 5%;
 
-  transform: translateX(500px);
+  transform: translateX(272%);
+
+  @include desktop {
+    transform: translateX(128%);
+  }
 }
 
 .slider__img {
