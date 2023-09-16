@@ -29,17 +29,17 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
-export const normalize = () => {
-  return gulp.src('source/css/normalize.css', { sourcemaps: true })
-    .pipe(plumber())
-    .pipe(postcss([
-      autoprefixer(),
-      csso()
-    ]))
-    .pipe(rename('normalize.min.css'))
-    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
-    .pipe(browser.stream());
-}
+// export const normalize = () => {
+//   return gulp.src('source/css/normalize.css', { sourcemaps: true })
+//     .pipe(plumber())
+//     .pipe(postcss([
+//       autoprefixer(),
+//       csso()
+//     ]))
+//     .pipe(rename('normalize.min.css'))
+//     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
+//     .pipe(browser.stream());
+// }
 
 // HTML
 
@@ -143,7 +143,7 @@ export const build = gulp.series(
   optimizeImages,
   gulp.parallel(
     styles,
-    normalize,
+    // normalize,
     html,
     svg,
     script,
@@ -156,7 +156,7 @@ export default gulp.series(
   copyImages,
   gulp.parallel(
     styles,
-    normalize,
+    // normalize,
     html,
     svg,
     script,
