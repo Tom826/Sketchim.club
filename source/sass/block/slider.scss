@@ -18,10 +18,10 @@
   margin: 0 auto;
   gap: 0 5%;
 
-  transform: translateX(272%);
+  transform: translateX(440%); //меняется в зависимости от кол-ва работ
 
   @include desktop {
-    transform: translateX(128%);
+    transform: translateX(208%); //меняется в зависимости от кол-ва работ
   }
 }
 
@@ -39,6 +39,6 @@
     }
 
     width: 320px;
-    height: 430px;
+    height: 404px;
   }
 }
